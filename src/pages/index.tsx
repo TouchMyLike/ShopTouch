@@ -15,6 +15,7 @@ export default function Home() {
           <Main />
         </div>
       </div>
+      <div className="bg-sky-300">Tailwindcss Support</div>
       <Footer />
     </div>
   )
