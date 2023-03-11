@@ -1,4 +1,5 @@
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss'
+import Link from 'next/link'
 
 export default function NewsLetter() {
   return (
@@ -6,8 +7,8 @@ export default function NewsLetter() {
       <h3>SIGN UP FOR OUR NEWSLETTER</h3>
       <div className={styles.footer__flex}>
         <input
-          type="text"
-          placeholder="Your Email Address"
+          type='text'
+          placeholder='Your Email Address'
           // value={email}
           // onChange={(e) => setEmail(e.target.value)}
         />
@@ -24,9 +25,8 @@ export default function NewsLetter() {
   {error && <div className="error">{error}</div>}
   {success && <div className="success">{success}</div>} */}
       <p>
-        By clicking the SUBSCRIBE button, you are agreeing to{" "}
-        {/* <Link href="">our Privacy & Cookie Policy</Link> */}
+        By clicking the SUBSCRIBE button, you are agreeing to <Link href=''>our Privacy & Cookie Policy</Link>
       </p>
     </div>
-  );
+  )
 }

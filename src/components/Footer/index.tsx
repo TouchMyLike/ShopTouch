@@ -1,8 +1,9 @@
-import React from "react";
-import Links from "./Links";
-import Socials from "./Socials";
-import NewsLetter from "./NewsLetter";
-import styles from "./styles.module.scss";
+import React from 'react'
+import Links from './Links'
+import Socials from './Socials'
+import NewsLetter from './NewsLetter'
+import Copyright from './Copyright'
+import styles from './styles.module.scss'
 
 export default function index() {
   return (
@@ -11,9 +12,8 @@ export default function index() {
         <Links />
         <Socials />
         <NewsLetter />
-        {/*  <Payment />
-        <Copyright country={country} />  */}
+        <Copyright />
       </div>
     </footer>
-  );
+  )
 }
