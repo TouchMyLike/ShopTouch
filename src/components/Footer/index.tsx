@@ -1,6 +1,7 @@
 import React from "react";
 import Links from "./Links";
 import Socials from "./Socials";
+import NewsLetter from "./NewsLetter";
 import styles from "./styles.module.scss";
 
 export default function index() {
@@ -9,8 +10,8 @@ export default function index() {
       <div className={styles.footer__container}>
         <Links />
         <Socials />
-        {/* <NewsLetter />
-        <Payment />
+        <NewsLetter />
+        {/*  <Payment />
         <Copyright country={country} />  */}
       </div>
     </footer>
