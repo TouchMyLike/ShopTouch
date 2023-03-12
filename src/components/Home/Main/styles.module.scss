@@ -1,33 +1,22 @@
 .main {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 4fr;
     gap: 10px;
     grid-template-areas:
-        "menu swiper swiper"
-        "menu swiper swiper"
         "menu swiper swiper";
 
     .menu {
         grid-area: menu;
-        height: 560px;
-        background: #D9D9D9;
+        height: 300px;
     }
 
     .header {
         grid-area: header;
         height: 40px;
-        background: #D9D9D9;
     }
 
     .swiper {
         grid-area: swiper;
         height: 300px;
-        background: #D9D9D9;
-    }
-
-    .offers {
-        grid-area: offers;
-        height: 200px;
-        background: #D9D9D9;
     }
 }
