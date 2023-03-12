@@ -1,12 +1,11 @@
 import styles from './styles.module.scss'
+import Menu from './Menu'
 
 export default function index() {
   return (
     <div className={styles.main}>
-      <div className={styles.header}>header</div>
-      <div className={styles.menu}>menu</div>
+      <Menu />
       <div className={styles.swiper}>swiper</div>
-      <div className={styles.offers}>offers</div>
     </div>
   )
 }
