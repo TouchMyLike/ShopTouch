@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,4 +48,8 @@ ul {
 button {
   border: none;
   outline: none;
+}
+
+.section {
+  @apply container mx-auto py-[8rem]  px-6;
 }
