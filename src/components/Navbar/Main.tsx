@@ -9,6 +9,7 @@ import { open } from '@/store/features/checkOutSlice'
 import { total } from '@/store/features/cartSlice'
 import CheckOut from '../CartMenu/CheckOut'
 import styles from './styles.module.scss'
+import { Badge } from '../my'
 
 export default function Main() {
   const dispatch = useDispatch()
@@ -31,10 +32,7 @@ export default function Main() {
             <RiSearch2Line />
           </div>
         </div>
-        <div className={styles.cart} onClick={() => dispatch(open())}>
-          <BiCart />
-          {!!amount && <span>{amount}</span>}
-        </div>
+        <Badge value={amount} bgColor='bg-red-500' icon={<BiCart onClick={() => dispatch(open())} />} />
         {isOpen && <CheckOut />}
       </div>
     </div>
