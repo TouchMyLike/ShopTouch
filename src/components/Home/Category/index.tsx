@@ -68,11 +68,11 @@ export default function index() {
       <div className='px-4 py-6'>
         <div className='flex items-center'>
           <div className='flex-1'>
-            <h2 className='text-2xl font-bold'>คูปอง</h2>
+            <h2 className='text-2xl font-bold'>ประเภทสินค้า</h2>
           </div>
           <div className='flex-0'>
             <Link href='#'>
-              <h2 className='text-xl font-bold text-primary'>ดูทั้งหมด</h2>
+              <h2 className='text-xl font-bold text-primary'>ดูสินค้าทั้งหมด</h2>
             </Link>
           </div>
         </div>
