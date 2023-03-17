@@ -9,8 +9,8 @@ const products = [
     href: '#',
     imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
-    price: 70,
-    discount: 10,
+    price: 100,
+    discount: 25,
   },
   {
     id: 2,
@@ -68,7 +68,7 @@ export default function index() {
       <div className='px-4 py-6'>
         <div className='flex items-center'>
           <div className='flex-1'>
-            <h2 className='text-2xl font-bold'>คูปอง</h2>
+            <h2 className='text-2xl font-bold'>สินค้าโปรโมชั่น</h2>
           </div>
           <div className='flex-0'>
             <Link href='#'>
@@ -96,7 +96,7 @@ export default function index() {
                     </a>
                   </h3>
                   <p className='text-md mt-1 font-bold text-red-500'>
-                    ฿{(product.price - product.price / product.discount).toFixed(2)}
+                    ฿{(product.price - (product.price * product.discount) / 100).toFixed(2)}
                   </p>
                   <p className='mt-1 text-sm text-gray-500 line-through'>฿{product.price}</p>
                 </div>
