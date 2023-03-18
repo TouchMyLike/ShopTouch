@@ -21,7 +21,8 @@ export function numberFormat(
   locales: Intl.LocalesArgument = 'en-US',
   options: Intl.NumberFormatOptions = { minimumFractionDigits: 2, maximumFractionDigits: 2 }
 ) {
-  return x.toLocaleString(locales, options)
+  const num = x || 0
+  return num.toLocaleString(locales, options)
 }
 
 // export const UtilsData = {

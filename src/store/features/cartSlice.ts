@@ -1,16 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { StaticImageData } from 'next/image'
 
-export type cartItemType = { id: number; amount: number; price: number; name: string; image: StaticImageData }
+export type cartItemType = {
+  id: number
+  name: string
+  image?: StaticImageData
+  imageSrc?: string
+  imageAlt?: string
+  price: number
+  discount?: number
+  amount: number
+  details?: []
+}
 export interface ICartItem {
   cartItems: cartItemType[]
   amount: number
-  total: number
+  totalPrice: number
+  totalDiscount: number
+  netPrice: number
 }
 const initialState: ICartItem = {
   cartItems: [],
   amount: 0,
-  total: 0,
+  totalPrice: 0,
+  totalDiscount: 0,
+  netPrice: 0,
 }
 export const cartSlice = createSlice({
   name: 'cart',
@@ -25,8 +39,6 @@ export const cartSlice = createSlice({
       state.amount++
       const itemIndex = state.cartItems.findIndex((cartItem) => cartItem.id === action.payload.id)
       state.cartItems[itemIndex].amount += 1
-      let total = 0
-      total = state.cartItems[itemIndex].amount * state.cartItems[itemIndex].price
     },
     decrease: (state, action) => {
       const itemIndex = state.cartItems.findIndex((cartItem) => cartItem.id === action.payload.id)
@@ -41,11 +53,16 @@ export const cartSlice = createSlice({
       })
     },
     total: (state) => {
-      let total = 0
+      let totalPrice = 0
+      let totalDiscount = 0
       state.cartItems.forEach((cartItem) => {
-        total += cartItem.amount * cartItem.price
+        const { amount, price, discount } = cartItem
+        totalPrice += price * amount
+        totalDiscount += ((price * (discount || 0)) / 100) * amount
       })
-      state.total = total
+      state.totalPrice = totalPrice
+      state.totalDiscount = totalDiscount
+      state.netPrice = totalPrice - totalDiscount
     },
     clear: (state) => {
       state.cartItems = []

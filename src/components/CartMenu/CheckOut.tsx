@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { HiTrash, HiX } from 'react-icons/hi'
+
 import { RootState } from '@/store'
 import { open } from '@/store/features/checkOutSlice'
 import { clear } from '@/store/features/cartSlice'
@@ -9,7 +10,7 @@ import { numberFormat } from '@/utils/UtilsData'
 
 export default function CheckOut() {
   const dispatch = useDispatch()
-  const { cartItems, total, amount } = useSelector((state: RootState) => state.cart)
+  const { cartItems, amount, totalPrice, totalDiscount, netPrice } = useSelector((state: RootState) => state.cart)
 
   return (
     <div className='fixed top-0 right-0 z-30 h-screen bg-white drop-shadow-md'>
@@ -32,8 +33,19 @@ export default function CheckOut() {
                 {cartItems.map((cartItem) => {
                   return <CheckOutItems key={cartItem.id} cartItem={cartItem} />
                 })}
-                <div className='mt-12 flex items-center justify-between'>
-                  <div>Total Cost: {numberFormat(total)} บาท</div>
+                <div className='mt-12 flex flex-col items-start justify-between'>
+                  <div className='flex w-full justify-between'>
+                    <div>รวมทั้งหมด : </div>
+                    <div>฿{numberFormat(totalPrice)}</div>
+                  </div>
+                  <div className='flex w-full justify-between'>
+                    <div>ส่วนลด : </div>
+                    <div>฿{numberFormat(totalDiscount)}</div>
+                  </div>
+                  <div className='flex w-full justify-between'>
+                    <div>ราคาสุทธิที่ต้องชำระ : </div>
+                    <div>฿{numberFormat(netPrice)}</div>
+                  </div>
                 </div>
                 <div className='mt-8 cursor-pointer bg-black p-3 text-center text-white'>สั่งซื้อสินค้า</div>
               </>
