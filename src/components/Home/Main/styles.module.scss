@@ -1,22 +1,32 @@
 .main {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+  grid-template-areas:
+    "menu swiper swiper";
+
+  .menu {
+    grid-area: menu;
+    height: 300px;
+  }
+
+  .header {
+    grid-area: header;
+    height: 40px;
+  }
+
+  .swiper {
+    grid-area: swiper;
+    height: 300px;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "menu swiper swiper";
+      "swiper";
 
     .menu {
-        grid-area: menu;
-        height: 300px;
+      display: none;
     }
-
-    .header {
-        grid-area: header;
-        height: 40px;
-    }
-
-    .swiper {
-        grid-area: swiper;
-        height: 300px;
-    }
+  }
 }

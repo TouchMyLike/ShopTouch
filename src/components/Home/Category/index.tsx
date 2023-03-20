@@ -17,7 +17,7 @@ export default function index() {
           </div>
         </div>
 
-        <div className='mt-4 mb-4 flex'>
+        <div className='mt-4 mb-4 flex overflow-auto'>
           {categoriesData?.categories.map((categorie, i) => (
             <div className='cursor-pointer hover:bg-primary' key={i}>
               <p className='py-0.5 px-5 text-xs'>{categorie.name}</p>
