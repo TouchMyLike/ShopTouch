@@ -1,16 +1,10 @@
-import styles from "./styles.module.scss";
-import { FaFacebookF, FaTiktok } from "react-icons/fa";
-import {
-  BsInstagram,
-  BsTwitter,
-  BsYoutube,
-  BsPinterest,
-  BsSnapchat,
-} from "react-icons/bs";
+import styles from './styles.module.scss'
+import { FaFacebookF, FaTiktok } from 'react-icons/fa'
+import { BsInstagram, BsTwitter, BsYoutube, BsPinterest, BsSnapchat } from 'react-icons/bs'
 export default function Socials() {
   return (
     <div className={styles.footer__socials}>
-      <section>
+      {/* <section>
         <h3>Follow Us</h3>
         <ul>
           <li>
@@ -49,7 +43,7 @@ export default function Socials() {
             </a>
           </li>
         </ul>
-      </section>
+      </section> */}
     </div>
-  );
+  )
 }

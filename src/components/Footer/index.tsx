@@ -7,13 +7,15 @@ import styles from './styles.module.scss'
 
 export default function index() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer__container}>
-        <Links />
-        <Socials />
-        <NewsLetter />
-        <Copyright />
+    <div className='mt-6 border-t-2 border-neutral-200 bg-white text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left'>
+      <div className='flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500'>
+        <div className='flex justify-center'>
+          <Links />
+        </div>
       </div>
-    </footer>
+      <div className='bg-secondary p-6 text-center text-white'>
+        <span>©2023 ShopTouch All Rights Resereved.</span>
+      </div>
+    </div>
   )
 }

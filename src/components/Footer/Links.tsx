@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "./styles.module.scss";
+import Link from 'next/link'
+import styles from './styles.module.scss'
 
 export default function Links() {
   return (
@@ -15,75 +15,71 @@ export default function Links() {
         </ul>
       ))}
     </div>
-  );
+  )
 }
 
 const links = [
   {
-    heading: "ShopTouch",
+    heading: 'บริการลูกค้า',
     links: [
       {
-        name: "About us",
-        link: "",
+        name: 'ศูนย์ช่วยเหลือ',
+        link: '',
       },
       {
-        name: "Contact us",
-        link: "",
+        name: 'วิธีการสั่งซื้อเเละชำระเงิน',
+        link: '',
       },
       {
-        name: "Social Responsibility",
-        link: "",
+        name: 'วิธีการจัดส่ง',
+        link: '',
       },
       {
-        name: "",
-        link: "",
+        name: 'สถานะการสั่งซื้อ',
+        link: '',
       },
     ],
   },
   {
-    heading: "HELP & SUPPORT",
+    heading: 'เกี่ยวกับเรา',
     links: [
       {
-        name: "Shipping Info",
-        link: "",
+        name: 'ข้อตกลงเเละเงื่อนไข',
+        link: '',
       },
       {
-        name: "Returns",
-        link: "",
+        name: 'Privacy Notice',
+        link: '',
       },
       {
-        name: "How To Order",
-        link: "",
+        name: 'นโยบายการใช้คุกกี้',
+        link: '',
       },
       {
-        name: "How To Track",
-        link: "",
-      },
-      {
-        name: "Size Guide",
-        link: "",
+        name: 'ติดต่อเรา',
+        link: '',
       },
     ],
   },
   {
-    heading: "Customer service",
+    heading: 'ดาวน์โหลดแอป Shoptouch',
     links: [
       {
-        name: "Customer service",
-        link: "",
+        name: '',
+        link: '',
       },
       {
-        name: "Terms and Conditions",
-        link: "",
+        name: '',
+        link: '',
       },
       {
-        name: "Consumers (Transactions)",
-        link: "",
+        name: '',
+        link: '',
       },
       {
-        name: "Take our feedback survey",
-        link: "",
+        name: '',
+        link: '',
       },
     ],
   },
-];
+]
