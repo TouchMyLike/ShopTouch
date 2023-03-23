@@ -22,8 +22,8 @@ export function Badge(props: BadgeType) {
           {cloneElement(props.icon, { className: `h-[35px] w-[35px] fill-gray-500 cursor-pointer` })}
           {showValue && (
             <span
-              className={`absolute top-[0.25rem] right-0 !m-0 h-[1.5rem] min-w-[1.5rem] 
-            -translate-y-1/2 translate-x-1/2 rounded-full bg-black text-center 
+              className={`absolute top-[0.25rem] right-0 !m-0 h-[1.5rem] min-w-[1.5rem] -translate-y-1/2 
+            translate-x-1/2 select-none rounded-full bg-black text-center 
             text-[0.75rem] font-bold leading-[1.5rem] text-white 
             ${value_length ? '!py-0 !px-[0.5rem]' : '!p-0'}
             ${props.className}
@@ -38,12 +38,12 @@ export function Badge(props: BadgeType) {
 
   return (
     <span
-      className={`inline-block h-[1.5rem] min-w-[1.5rem] rounded-full bg-black text-center text-[0.75rem] font-bold leading-[1.5rem] text-white 
+      className={`inline-block h-[1.5rem] min-w-[1.5rem] select-none rounded-full bg-black text-center text-[0.75rem] font-bold leading-[1.5rem] text-white 
       ${value_length ? '!py-0 !px-[0.5rem]' : '!p-0'} 
       ${props.className}
       ${props.bgColor}`}
     >
-      {props.value}
+      {value}
       <></>
     </span>
   )

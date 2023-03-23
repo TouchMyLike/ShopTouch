@@ -22,7 +22,7 @@ export default function ShoppingItemId(props: IShoppingItemId) {
   return (
     <>
       <Navbar />
-      <section className='min-h-screen bg-[#fafafa]'>
+      <section className='section min-h-screen bg-[#fafafa]'>
         <div className='flex min-h-screen w-full items-center justify-center p-4'>
           <div className='items-center justify-center lg:flex '>
             <Image
