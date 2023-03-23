@@ -14,12 +14,14 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className={styles.home}>
-        <div className={styles.container}>
+      <div>
+        <div className='md:hidden'>
+          <Category />
+        </div>
+        <div className='pt-3 lg:p-5'>
           <Main />
           <FlashDeals />
           <Coupon />
-          <Category />
           <Infomation />
         </div>
       </div>

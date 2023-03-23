@@ -1,77 +1,78 @@
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
+
+export { HiX } from 'react-icons/hi'
 
 interface categoriesType {
-    state: string
-    error: string
-    data: {
-        categories: { name: string; subcategories: string[] }[]
-        // priceRange: string[]
-    } | null
+  state: string
+  error: string
+  data: {
+    categories: { name: string; subcategories: string[] }[]
+  } | null
 }
 
 export const categoriesData: categoriesType['data'] = {
-    categories: [
-        {
-            name: 'อาหารสดเเละเบเกอรี่',
-            subcategories: [
+  categories: [
+    {
+      name: 'ซูเปอร์มาร์เก็ต',
+      subcategories: [
 
-            ],
-        },
-        {
-            name: 'ไข่ นม เเละผลิตภัณฑ์จากนม',
-            subcategories: [
+      ],
+    },
+    {
+      name: 'ความงาม',
+      subcategories: [
 
-            ],
-        },
-        {
-            name: 'ของเเห้งเเละเครื่องปรุง',
-            subcategories: [],
-        },
-        {
-            name: 'ขนมขบเคี้ยวเเละของหวาน',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'ความงามเเละของใช้ส่วนตัว',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'เเม่เเละเด็ก',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'ของใช้ในบ้าน',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'บ้านเเละไลฟ์สไตล์',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'เครื่องเขียนเเละอุปกรณ์สำนักงาน',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'อาหารเเละอุปกรณ์สัตว์เลี้ยง',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'เครื่องใช้ไฟฟ้า',
-            subcategories: [
-            ],
-        },
-        {
-            name: 'เสื้อผ้า',
-            subcategories: [
-            ],
-        },
-    ],
-    // priceRange: ['ไม่เกิน 100 บาท', '100 - 300 บาท', '300 - 600 บาท', 'มากกว่า 600 บาท'],
+      ],
+    },
+    {
+      name: 'สุขภาพ',
+      subcategories: [],
+    },
+    {
+      name: 'เครื่องใช้ไฟฟ้า',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'บ้านเเละสวน',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'ผลิตภัณฑ์',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'เเม่เเละเด็ก ผู้สูงอายุ',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'ไอที&กล้อง',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'มือถือเเละ',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'เเฟชั่น',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'หนังสือ',
+      subcategories: [
+      ],
+    },
+    {
+      name: 'สินค้า SMEs',
+      subcategories: [
+      ],
+    },
+  ],
+  // priceRange: ['ไม่เกิน 100 บาท', '100 - 300 บาท', '300 - 600 บาท', 'มากกว่า 600 บาท'],
 }
