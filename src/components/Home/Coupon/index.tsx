@@ -65,29 +65,24 @@ export default function index() {
           </div>
         </div>
 
-        <div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-5 xl:gap-x-8'>
-          {products.map((product) => (
-            <div key={product.id} className='group relative'>
-              <div className='aspect-w-1 aspect-h-1 lg:aspect-none h-80 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80'>
-                <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className='h-full w-full object-cover object-center lg:h-full lg:w-full'
-                />
-              </div>
-              <div className='mt-4 flex justify-between'>
-                <div>
-                  <p className='text-lg font-bold text-gray-700'>
-                    <a href={product.href}>
-                      <span aria-hidden='true' className='absolute inset-0' />
-                      {product.name}
-                    </a>
-                  </p>
-                  <p className='mt-1 text-sm text-gray-500'>{product.description}</p>
+        <div className='overflow-scroll'>
+          <div className='mt-10 mb-5 flex w-fit justify-center justify-items-center gap-y-20 gap-x-3'>
+            {products.map((product) => (
+              <div key={product.id}>
+                <div className='w-40 rounded-xl bg-white shadow-md duration-500 hover:scale-105 hover:shadow-xl'>
+                  <a href='#'>
+                    <img src={product.imageSrc} alt='Product' className='h-40 w-40 rounded-t-xl object-cover' />
+                    <div className='w-40 px-4 py-3'>
+                      <p className='block truncate text-lg font-bold capitalize text-black'>{product.name}</p>
+                      <div className='flex w-full items-center'>
+                        <p className='cursor-auto text-xs text-gray-600'>{product.description}</p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
