@@ -1,9 +1,10 @@
 import React from 'react'
+import Link from 'next/link'
 
-export default function () {
+export default function Product() {
   return (
     <div className='w-40 rounded-xl bg-white shadow-md duration-500 hover:scale-105 hover:shadow-xl'>
-      <a href='#'>
+      <Link href='#'>
         <img
           src='https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
           alt='Product'
@@ -31,7 +32,7 @@ export default function () {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   )
 }

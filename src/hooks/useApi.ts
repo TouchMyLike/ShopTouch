@@ -1,7 +1,3 @@
-import { ReactElement, useEffect, useState } from 'react'
-
-export { HiX } from 'react-icons/hi'
-
 interface itemsType {
   name: string
 }

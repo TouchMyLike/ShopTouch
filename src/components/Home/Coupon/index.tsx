@@ -70,7 +70,7 @@ export default function index() {
             {products.map((product) => (
               <div key={product.id}>
                 <div className='w-40 rounded-xl bg-white shadow-md duration-500 hover:scale-105 hover:shadow-xl'>
-                  <a href='#'>
+                  <Link href='#'>
                     <img src={product.imageSrc} alt='Product' className='h-40 w-40 rounded-t-xl object-cover' />
                     <div className='w-40 px-4 py-3'>
                       <p className='block truncate text-lg font-bold capitalize text-black'>{product.name}</p>
@@ -78,7 +78,7 @@ export default function index() {
                         <p className='cursor-auto text-xs text-gray-600'>{product.description}</p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
