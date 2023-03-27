@@ -20,8 +20,8 @@ export default function Home() {
         </div>
         <div className='pt-3 lg:p-5'>
           <Main />
-          <FlashDeals />
-          <Coupon />
+          {/* <FlashDeals />
+          <Coupon /> */}
           <Infomation />
         </div>
       </div>

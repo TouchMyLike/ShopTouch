@@ -1,19 +1,23 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Product() {
+interface propsType {
+  name: string
+  price: number
+  src: string
+}
+
+export default function Product(props: propsType) {
+  console.log(props.src)
   return (
     <div className='w-40 rounded-xl bg-white shadow-md duration-500 hover:scale-105 hover:shadow-xl'>
       <Link href='#'>
-        <img
-          src='https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
-          alt='Product'
-          className='h-40 w-40 rounded-t-xl object-cover'
-        />
+        <Image src={props.src} alt='product' width={160} height={160} className='rounded-t-xl object-cover' />
         <div className='w-40 px-4 py-3'>
-          <p className='block truncate text-lg font-bold capitalize text-black'>Product Name</p>
+          <p className='block truncate text-xs font-bold capitalize text-black'>{props.name}</p>
           <div className='flex items-center'>
-            <p className='my-3 cursor-auto text-xs font-semibold text-gray-500'>$149</p>
+            <p className='my-3 cursor-auto text-xs font-semibold text-gray-500'>฿{props.price}</p>
             <div className='ml-auto'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
