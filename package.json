@@ -11,12 +11,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.13",
     "@reduxjs/toolkit": "^1.9.3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.4",
+    "fs": "^0.0.1-security",
     "mongoose": "^7.0.1",
     "next": "13.2.4",
     "next-redux-wrapper": "^8.1.0",
@@ -30,6 +34,7 @@
     "redux-thunk": "^2.4.2",
     "sass": "^1.58.3",
     "swiper": "^9.1.0",
+    "swr": "^2.1.1",
     "typescript": "4.9.5"
   },
   "devDependencies": {

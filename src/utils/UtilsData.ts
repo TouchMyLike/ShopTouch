@@ -25,6 +25,9 @@ export function numberFormat(
   return num.toLocaleString(locales, options)
 }
 
+export function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ')
+}
 // export const UtilsData = {
 //   isNumber: function isNumber(x: any): x is number {
 //     return typeof x === 'number'

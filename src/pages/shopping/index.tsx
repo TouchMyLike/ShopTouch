@@ -10,46 +10,10 @@ import defaultImage from '@/assets/images/default_image.png'
 import { add, cartItemType } from '@/store/features/cartSlice'
 import { numberFormat } from '@/utils/UtilsData'
 import { categoriesData } from '@/hooks/useApi'
+import Pagination from '@/components/my/Pagination'
 
 export default function Shopping() {
   const items_page = 10
-  const pagination_page = items.length / items_page
-  const pagesArray = []
-  for (var i = 0; i < pagination_page; i++) {
-    pagesArray.push(
-      <li key={i}>
-        <Link
-          href='#'
-          className='border border-gray-300 bg-white px-3 py-2 text-[15px] leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
-        >
-          {i + 1}
-        </Link>
-      </li>
-    )
-  }
-  const pagination = (
-    <ul className='flex items-center -space-x-px'>
-      <li>
-        <Link
-          href='#'
-          className='ml-0 rounded-l-lg border border-gray-300 bg-white px-3 py-2 text-[15px] leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
-        >
-          <span className='sr-only'>Previous</span>
-          {'<'}
-        </Link>
-      </li>
-      {pagesArray}
-      <li>
-        <Link
-          href='#'
-          className='rounded-r-lg border border-gray-300 bg-white px-3 py-2 text-[15px] leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
-        >
-          <span className='sr-only'>Next</span>
-          {'>'}
-        </Link>
-      </li>
-    </ul>
-  )
 
   // let {startIndex, endIndex, data} = props
 
@@ -66,7 +30,7 @@ export default function Shopping() {
           <BiCaretRight className='inline' />
           <Link href='#'>ตัวกรอง2</Link>
         </div>
-        <div className='flex gap-3'>
+        <div className='flex gap-0 md:gap-3'>
           <div /* Menu Filters */>
             <div className='hidden md:block '>
               <div className='flex w-48 shrink-0 flex-col rounded-lg bg-white drop-shadow-lg'>
@@ -137,8 +101,8 @@ export default function Shopping() {
                     })}
                   </div>
                 </div>
+                <Pagination />
               </div>
-              <div className='mt-3 self-end'>{pagination}</div>
             </div>
           </div>
         </div>
@@ -162,7 +126,7 @@ export function ShoppingItems(props: IShoppingItems) {
   return (
     <div className='group relative'>
       <Link href={phref}>
-        <div className='aspect-w-1 aspect-h-1 lg:aspect-none h-80 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80'>
+        <div className='aspect-w-1 aspect-h-1 h-80 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80'>
           <Image
             src={pImage}
             alt={pImageAlt}
