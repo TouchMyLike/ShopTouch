@@ -62,8 +62,7 @@ export default function CategoryFilters(props: ICategoryFilters) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   return (
-    // <div className='bg-white'>
-    <div>
+    <>
       {/* Mobile filter dialog */}
       <Transition.Root show={mobileFiltersOpen} as={Fragment}>
         <Dialog as='div' className='relative z-40 lg:hidden' onClose={setMobileFiltersOpen}>
@@ -234,7 +233,7 @@ export default function CategoryFilters(props: ICategoryFilters) {
 
           <div className='grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4'>
             {/* Filters */}
-            <form className='hidden lg:block'>
+            <form className='hidden rounded-lg border bg-white p-5 drop-shadow-lg lg:block'>
               <h3 className='sr-only'>Categories</h3>
               <ul role='list' className='space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900'>
                 {subCategories.map((category) => (
@@ -293,7 +292,6 @@ export default function CategoryFilters(props: ICategoryFilters) {
           </div>
         </section>
       </main>
-    </div>
-    // </div>
+    </>
   )
 }

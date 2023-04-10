@@ -9,7 +9,7 @@ export default function Products() {
   return (
     <section className='section min-h-screen bg-[#fafafa]'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div className='px-3 text-sm text-gray-700'>
+        <div className='text-md text-gray-500'>
           <Link href='#'>หน้าหลัก</Link>
           <BiCaretRight className='inline' />
           <Link href='#'>ตัวกรอง1</Link>
