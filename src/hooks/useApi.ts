@@ -1,18 +1,4 @@
-interface itemsType {
-  name: string
-}
-
-interface categoriesType {
-  state: string
-  error: string
-  data: {
-    categories: {
-      name: string;
-      subcategories: string[],
-      items: itemsType[]
-    }[]
-  } | null
-}
+import { categoriesType } from '@/types'
 
 export const categoriesData: categoriesType['data'] = {
   categories: [

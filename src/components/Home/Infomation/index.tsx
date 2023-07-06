@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { categoriesData } from '@/hooks/useApi'
 import { ProductList } from '@/data/ProductList'
 import Product from './Product'
 
@@ -8,27 +7,24 @@ export default function index() {
   return (
     <div>
       {ProductList.map((p, i) => (
-        <div className='mt-6 rounded-lg bg-white drop-shadow-lg' key={i}>
-          <div className='px-4 py-6'>
+        <div className='mb-4 mt-4 pl-2 pr-2' key={i}>
+          <div className='rounded-3xl bg-white pt-4 pr-6 pl-6 drop-shadow-lg'>
             <div className='flex items-center'>
               <div className='flex-1'>
-                <h2 className='text-sm font-bold'>{p.name}</h2>
+                <span className='text-xl font-bold'>{p.name}</span>
               </div>
               <div className='flex-0'>
                 <Link href='#'>
-                  <h2 className='text-sm font-bold text-primary'>ดูเพิ่มเติม&#62;&#62;</h2>
+                  <span className='text-lg font-extrabold text-link'>ดูสินค้าเพิ่มเติม</span>
                 </Link>
               </div>
             </div>
-            <hr className='m-5' />
-            <div className='overflow-scroll'>
-              <div className='mx-auto mt-10 mb-5 flex w-fit justify-center justify-items-center gap-y-20 gap-x-3'>
-                {p.items.map((item, i) => (
-                  <div key={i}>
-                    <Product name={item.name} price={item.price} src={item.src} />
-                  </div>
-                ))}
-              </div>
+            <div className='flex gap-0 overflow-x-scroll md:gap-5'>
+              {p.items.map((item, i) => (
+                <div key={i}>
+                  <Product name={item.name} price={item.price} src={item.src} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

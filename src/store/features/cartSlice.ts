@@ -1,24 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { StaticImageData } from 'next/image'
+import { ICartItem } from '@/types'
 
-export type cartItemType = {
-  id: number
-  name: string
-  image?: StaticImageData
-  imageSrc?: string
-  imageAlt?: string
-  price: number
-  discount?: number
-  amount: number
-  details?: []
-}
-export interface ICartItem {
-  cartItems: cartItemType[]
-  amount: number
-  totalPrice: number
-  totalDiscount: number
-  netPrice: number
-}
 const initialState: ICartItem = {
   cartItems: [],
   amount: 0,
