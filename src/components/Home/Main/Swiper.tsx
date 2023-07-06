@@ -11,6 +11,7 @@ import styles from './styles.module.scss'
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper'
+import Image from 'next/image'
 
 export default function MainSwiper(): JSX.Element {
   return (
@@ -28,11 +29,11 @@ export default function MainSwiper(): JSX.Element {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className='mainSwiper drop-shadow-lg rounded-lg'
+        className='mainSwiper rounded-lg drop-shadow-lg'
       >
         {[...Array(15).keys()].map((i) => (
           <SwiperSlide key={i}>
-            <img src={`../../../../images/pro1.png`} alt='' />
+            <Image src={`/images/pro1.png`} alt='' width={500} height={500} />
           </SwiperSlide>
         ))}
       </Swiper>
