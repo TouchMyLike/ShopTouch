@@ -1,4 +1,4 @@
-import { cartItemType } from '@/store/features/cartSlice'
+import { cartItemType } from '@/types'
 
 export const items: cartItemType[] = [
   {

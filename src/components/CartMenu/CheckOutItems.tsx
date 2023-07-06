@@ -3,7 +3,9 @@ import Image from 'next/image'
 import { HiX } from 'react-icons/hi'
 
 import defaultImage from '@/assets/images/default_image.png'
-import { increase, decrease, remove, cartItemType } from '@/store/features/cartSlice'
+import { increase, decrease, remove } from '@/store/features/cartSlice'
+import { cartItemType } from '@/types'
+
 import { numberFormat } from '@/utils/UtilsData'
 
 interface ICheckOutItems {

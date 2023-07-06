@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-type cartItemType = {
+export type cartItemType = {
   id: number
   name: string
   image?: StaticImageData
