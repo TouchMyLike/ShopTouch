@@ -80,12 +80,12 @@ export default function index() {
         <div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-4 lg:grid-cols-6 xl:gap-x-8'>
           {products.map((product) => (
             <div key={product.id} className='group relative'>
-              <div className='aspect-w-1 aspect-h-1 lg:aspect-none h-80 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80'>
-                <img
+              <div className='aspect-w-1 aspect-h-1 h-80 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80'>
+                {/* <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
                   className='h-full w-full object-cover object-center lg:h-full lg:w-full'
-                />
+                /> */}
               </div>
               <div className='mt-4 flex justify-between'>
                 <div>

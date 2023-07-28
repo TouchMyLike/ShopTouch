@@ -29,7 +29,7 @@ export default function Top() {
             {loggedIn ? (
               <li className={styles.li}>
                 <div className={styles.flex}>
-                  <img src={`https://cdn-icons-png.flaticon.com/512/3361/3361836.png`} alt='' />
+                  {/* <img src={`https://cdn-icons-png.flaticon.com/512/3361/3361836.png`} alt='' /> */}
                   <span>TSM</span>
                   <RiArrowDropDownFill />
                 </div>
